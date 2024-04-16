@@ -13,6 +13,5 @@ export function errorMiddleware(
     status: error.status,
     message: error.message || 'Something went wrong',
     path: request.path,
-    request_id: request.id,
   });
 }

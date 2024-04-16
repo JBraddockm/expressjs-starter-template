@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 
 export function responseMiddleware(
-  request: Request,
+  _request: Request,
   response: Response,
   next: NextFunction
 ) {
@@ -21,7 +21,6 @@ export function responseMiddleware(
         code: response.statusCode,
         message: 'success',
         data: data,
-        request_id: request.id,
       });
     }
 
