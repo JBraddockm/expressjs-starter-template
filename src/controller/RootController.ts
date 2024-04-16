@@ -1,4 +1,4 @@
-import { Controller } from '@src/controller';
+import Controller from '@src/controller/controller.type';
 import { NextFunction, Request, Response, Router } from 'express';
 
 class RootController implements Controller {

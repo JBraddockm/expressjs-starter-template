@@ -1,6 +1,5 @@
-import expressRequestId from '@baseland-io/express-request-id/dist';
 import * as config from '@src/config';
-import { type Controller } from '@src/controller';
+import Controller from '@src/controller/controller.type';
 import { HttpException } from '@src/exceptions';
 import { errorMiddleware, responseMiddleware } from '@src/middlewares';
 import cookieParser from 'cookie-parser';
@@ -30,7 +29,6 @@ export default class App {
         exposedHeaders: ['Authorization', `${config.authHeaderKey}`],
       })
     );
-    this.app.use(expressRequestId());
     this.app.use(cookieParser());
     this.app.use(express.json());
 
