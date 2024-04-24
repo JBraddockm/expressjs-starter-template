@@ -1,5 +1,5 @@
 import * as config from '@src/config';
-import Controller from '@src/controller/controller.type';
+import { Controller } from '@src/controller';
 import { HttpException } from '@src/exceptions';
 import { errorMiddleware, responseMiddleware } from '@src/middlewares';
 import cookieParser from 'cookie-parser';
